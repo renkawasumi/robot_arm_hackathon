@@ -11,11 +11,11 @@
   <arg name="velocity_control" default="false"/>
   <arg name="enforce_limits" default="true" />
 
-  <include file="$(find realsense2_camera)/launch/rs_camera.launch">
+  <!--include file="$(find realsense2_camera)/launch/rs_camera.launch"-->
     <!-- <arg name="filters" value="pointcloud" /> -->
-    <arg name="align_depth" value="true" />
+    <!--arg name="align_depth" value="true" /-->
     <!-- <arg name="enable_sync" default="true"/> -->
-  </include>
+  <!--/include-->
 
   <node pkg="tf" type="static_transform_publisher" name="robot_to_sensor" args="0.07 0 0.02 3.14159 -1.5708 0 link_eef camera_link 10" />
   
